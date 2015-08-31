@@ -1,0 +1,17 @@
+#container{
+	width: 550px;
+	margin: 0 auto;
+	margin-top: 50px;
+	text-align: center;
+}
+
+h1{
+	font-size: 100px;
+	font: 'normal' 100px/1.5 bold;
+	color: #ead7d7;
+}
+
+#todos_wrap{
+	width: 550px;
+	height: 170px;
+}
