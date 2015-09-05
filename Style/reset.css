@@ -32,6 +32,21 @@ a{
 	color:#656565;
 }
 
+button{
+	margin: 0;
+	padding: 0;
+	border: 0;
+	background: none;
+	font-size: 100%;
+	vertical-align: baseline;
+	font-family: inherit;
+	-webkit-appearance: none;
+	appearance: none;
+	-webkit-font-smoothing: antialiased;
+	font-smoothing: antialiased;
+	outline: none;
+}
+
 /*清浮动*/
 .clearfix:after{
 	content:"";

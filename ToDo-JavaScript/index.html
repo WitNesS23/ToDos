@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<meta charset="utf-8">
 	<title>ToDo relay on JavaScript</title>
 	<link rel="stylesheet" type="text/css" href="../Style/reset.css">
 	<link rel="stylesheet" type="text/css" href="../Style/style.css">
@@ -8,7 +9,22 @@
 <body>
 	<div id="container">
 		<h1>todos</h1>
-		<div id="todos_wrap"></div>
+		<div id="todos_wrap">
+			<input id="input_original" placeholder="What needs to be done?"/>
+			<ul class="items_wrap">
+				<li>
+					<div>
+						<button class="need_to_do">✔</button>
+						<label class="todo_text">1111111</label>
+						<button class="btn_del">×</button>
+						<input class="todo_edit" />
+					</div>
+				</li>
+			</ul>
+			<div>
+				
+			</div>
+		</div>
 		<div id="description">
 			Double-click to edit a todo <br/>
 			Created by WitNesS23
