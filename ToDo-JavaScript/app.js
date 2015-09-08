@@ -85,6 +85,44 @@ function bindDel(){
 	}
 }
 
+// todoitem 双击事件
+function binddblClick(){
+	for(var i = 0; i < g('.todo_text').length; i++){
+		+function(a){
+			addEvent(g('.todo_text')[i], 'dblclick', function(event){
+				this.style.display = 'none';
+				var input_edit = document.createElement('input');
+				input_edit.value = this.innerText;
+				input_edit.className = 'todo_edit';
+				this.parentElement.appendChild(input_edit);
+				input_edit.autofocus = 'autofocus';
+
+				addEvent(input_edit, 'blur', function(event){
+					var label_edit = this.previousSibling.previousSibling;
+					label_edit.innerText = this.value;
+					label_edit.style.display = 'block';
+					var parentNode = this.parentElement;
+					parentNode.removeChild(this);
+				});
+			});
+		}(i);
+	}
+}
+
+function bindBlur(){
+	for(var i = 0; i < g('.todo_edit').length; i++){
+		+function(a){
+			addEvent(g('.todo_edit')[i], 'blur', function(event){
+				var label_edit = this.previousSibling.previousSibling;
+				label_edit.innerText = this.value;
+				var parentNode = this.parentElement;
+				parentNode.removeChild(this);
+			});
+		}
+	}
+}
+
+
 // todos 列表计数函数
 function itemsCountChange(){
 	var countUnFinished = arrTodos.length;
@@ -134,14 +172,15 @@ function reDraw(keyStatus){
 			button_del.innerText = '×';
 			button_del.className = 'btn_del';
 
-			var input_edit = document.createElement('input');
-			input_edit.className = 'todo_edit';
+			// var input_edit = document.createElement('input');
+			// input_edit.value = arrTodos[i].text;
+			// input_edit.className = 'todo_edit';
 
 
 			li_wrap.appendChild(button_NTD);
 			li_wrap.appendChild(label_text);
 			li_wrap.appendChild(button_del);
-			li_wrap.appendChild(input_edit);
+			// li_wrap.appendChild(input_edit);
 
 			if(keyStatus == 'All' || keyStatus == undefined){
 				g('.items_wrap')[0].appendChild(li_wrap);
@@ -154,5 +193,7 @@ function reDraw(keyStatus){
 		bindDel();
 		bindFinish();
 		itemsCountChange();
+		binddblClick();
+		bindBlur();
 	}
 }
