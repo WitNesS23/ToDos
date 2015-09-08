@@ -1,0 +1,4 @@
+function Todo(){
+	
+	this.init();
+}

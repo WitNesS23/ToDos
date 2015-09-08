@@ -23,7 +23,7 @@ h1{
 	width: 100%;
 	outline: none;
 	font: normal normal 24px/1.6 'Helvetica Neue', Helvetica, 'Microsoft YaHei', Arial, serif;
-	padding: 16px 16px 16px 50px;
+	padding: 16px 16px 16px 60px;
 	box-sizing: border-box;
 	border: none;
 }
@@ -91,8 +91,8 @@ h1{
 }
 
 .todo_text{
-	position: absolute;
-	left: 50px;
+	padding: 0 60px;
+	display: block;
 	color: #000;
 	text-decoration: none;
 }
@@ -125,12 +125,12 @@ h1{
 }
 
 .todo_edit{
-	position: absolute;
-	left: 50px;
 	color: #999;
-	font: normal normal 24px/40px 'Helvetica Neue', Helvetica, 'Microsoft YaHei', Arial, serif;
-	padding: 10px 0px;
-	display: none;
+	font: normal normal 24px/58px 'Helvetica Neue', Helvetica, 'Microsoft YaHei', Arial, serif;
+	border: 1px dashed #ead7d7;
+	margin-left: 50px;
+	padding-left: 10px;
+	width: 445px;
 }
 
 .footer{
