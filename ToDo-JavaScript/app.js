@@ -96,6 +96,7 @@ function binddblClick(){
 				input_edit.className = 'todo_edit';
 				this.parentElement.appendChild(input_edit);
 				input_edit.autofocus = 'autofocus';
+				
 
 				addEvent(input_edit, 'blur', function(event){
 					var label_edit = this.previousSibling.previousSibling;
@@ -108,20 +109,6 @@ function binddblClick(){
 		}(i);
 	}
 }
-
-function bindBlur(){
-	for(var i = 0; i < g('.todo_edit').length; i++){
-		+function(a){
-			addEvent(g('.todo_edit')[i], 'blur', function(event){
-				var label_edit = this.previousSibling.previousSibling;
-				label_edit.innerText = this.value;
-				var parentNode = this.parentElement;
-				parentNode.removeChild(this);
-			});
-		}
-	}
-}
-
 
 // todos 列表计数函数
 function itemsCountChange(){
@@ -194,6 +181,5 @@ function reDraw(keyStatus){
 		bindFinish();
 		itemsCountChange();
 		binddblClick();
-		bindBlur();
 	}
 }
