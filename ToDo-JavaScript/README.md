@@ -60,6 +60,8 @@ function addEvent(node, type, handler) {
 
 #### for in 和传统 for(var i = 0; i < length; i++) 的区别
 
+[博客园关于for-in和for的简单介绍和比较](http://www.cnblogs.com/WitNesS/p/4792916.html)
+
 #### 闭包的应用
 
 #### 存疑
