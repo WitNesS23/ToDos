@@ -48,6 +48,10 @@ h1{
     font-style: italic;
 }
 
+.todos_detail{
+	display: none;
+}
+
 .items_wrap{
 	position: relative;
 }

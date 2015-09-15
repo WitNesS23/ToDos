@@ -117,6 +117,15 @@ function binddblClick(node){
 			var parentNode = this.parentElement;
 			parentNode.removeChild(this);
 		});
+
+		addEvent(input_edit, 'keydown', function(event){
+			if(event.keyCode !== 13 || this.value.trim() === '') return;
+			var label_edit = this.previousSibling.previousSibling;
+			label_edit.innerHTML = this.value;
+			label_edit.style.display = 'block';
+			var parentNode = this.parentElement;
+			parentNode.removeChild(this);
+		})
 	});
 }
 
